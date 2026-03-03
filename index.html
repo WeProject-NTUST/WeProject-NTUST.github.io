@@ -272,8 +272,8 @@
             document.getElementById('education').textContent = profileData.education;
             document.getElementById('email').textContent = profileData.email;
             document.getElementById('email').href = `mailto:${profileData.email}`;
-            document.getElementById('linkedin').href = profileData.linkedin;
-            document.getElementById('linkedin-text').textContent = profileData.linkedin;
+            document.getElementById('linkedin').href = profileData.WebSite;
+            document.getElementById('linkedin-text').textContent = profileData.WebSite;
             const aboutText = [profileData.about1, profileData.about2, profileData.about3, profileData.about4]
                 .filter(text => text && text.trim()) // Remove empty parts
                 .join(' ');
