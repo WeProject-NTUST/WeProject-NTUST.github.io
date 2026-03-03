@@ -2,6 +2,18 @@
     --primary-orange: #FF9900;    /* 主背景橘色 */
     --light-orange: #ffe5b4;      /* 淡橘色（用於圓圈與文字） */
     --deep-orange: #e67e22;       /* 深橘色（用於標題文字） */
+
+    --primary-pink: #5cc6ff;
+    --secondary-pink: #a9ddff;
+    --light-pink: #eef6ff; 
+    --deep-pink: #1f3f73;
+    
+    --gradient-pink: linear-gradient(
+        180deg,
+        #2a5799 0%,
+        #214b86 45%,
+        #1b3e73 100%
+    );
     
     --gradient-orange: linear-gradient(
         180deg,
