@@ -25,9 +25,11 @@ body {
 
 /* Navigation */
 .navbar {
-    background: rgba(42, 87, 153, 0.95) !important;
+    /* 將原本的 rgba(42, 87, 153, 0.95) 改為深橘色 */
+    background: rgba(211, 84, 0, 0.95) !important;
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(33, 75, 134, 0.35);
+    /* 修改陰影顏色，使其與橘色調和 */
+    box-shadow: 0 2px 20px rgba(135, 54, 0, 0.35);
     transition: all 0.3s ease;
 }
 
@@ -45,7 +47,8 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--secondary-pink) !important;
+    /* 原本是淡藍色，改為您之前設定的淡橘色 */
+    color: var(--light-orange) !important;
     transform: translateY(-2px);
 }
 
