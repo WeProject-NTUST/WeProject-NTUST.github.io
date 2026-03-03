@@ -26,7 +26,7 @@ body {
 /* Navigation */
 .navbar {
     /* 將原本的 rgba(42, 87, 153, 0.95) 改為深橘色 */
-    background: rgba(211, 84, 0, 0.95) !important;
+    background: rgba(255, 140, 0, 1) !important;
     backdrop-filter: blur(10px);
     /* 修改陰影顏色，使其與橘色調和 */
     box-shadow: 0 2px 20px rgba(135, 54, 0, 0.35);
