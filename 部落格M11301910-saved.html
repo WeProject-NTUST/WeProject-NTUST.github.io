@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>靈魂慢速冒險：單車旅遊全方位解密</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        anime: {
+                            sky: '#87CEEB',
+                            sunset: '#FF7F50',
+                            deep: '#2C3E50',
+                            gold: '#FFD700',
+                            accent: '#FF4757',
+                            soft: '#F0F4F8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'scroll-reveal': 'scroll-reveal linear forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .anime-gradient-text {
+            background: linear-gradient(135deg, #FF7F50, #FFD700, #87CEEB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .section-divider {
+            height: 4px;
+            width: 60px;
+            background: linear-gradient(90deg, #FF4757, transparent);
+            margin: 1.5rem 0;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .hero-image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .hero-image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(255, 71, 87, 0.2);
+            color: #FF4757;
+            border: 1px solid rgba(255, 71, 87, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        /* Anime style thick borders for certain highlights */
+        .anime-border {
+            border: 3px solid #1e293b;
+            box-shadow: 8px 8px 0px #1e293b;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <header class="relative w-full">
+        <div class="hero-image-container">
+            <img src='https://opal.google/board/blobs/996ef50a-d135-403d-810b-f22996def063' alt='Bicycle Adventure Banner' class="object-cover max-h-[70vh] w-full" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-90"></div>
+            <div class="absolute bottom-10 left-0 right-0 px-6 max-w-5xl mx-auto text-center md:text-left">
+                <span class="badge font-display">Adventure & Discovery</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-display anime-gradient-text leading-tight mb-4">
+                    不只是流汗，是一場靈魂的慢速冒險！
+                </h1>
+                <p class="text-slate-300 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
+                    全方位解密「單車旅遊」：在追求速度的時代，用時速 15 公里重新與世界對話。
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Intro Quote Section -->
+        <section class="mb-20">
+            <div class="glass-card p-8 md:p-12 relative overflow-hidden group">
+                <div class="absolute -right-10 -top-10 text-9xl text-slate-800 opacity-20 font-display select-none italic">
+                    "Slow"
+                </div>
+                <div class="relative z-10">
+                    <p class="text-xl md:text-2xl leading-relaxed text-slate-200">
+                        在一個推崇「高鐵一小時達」、「廉航週末快閃」的加速時代裡，有群人卻反其道而行，選擇把自己綁在兩個輪子上，頂著日曬雨淋前進。
+                    </p>
+                    <div class="mt-6 flex items-center space-x-4">
+                        <div class="h-12 w-12 rounded-full bg-anime-sunset flex items-center justify-center text-white font-bold text-xl">反</div>
+                        <p class="text-anime-sunset font-semibold tracking-wide">這是一場對於現代社會「唯快是圖」的溫柔反叛。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: What is it? -->
+        <section class="mb-24">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="md:w-1/3 sticky top-10">
+                    <h2 class="text-5xl font-display font-black text-anime-sky mb-4">01</h2>
+                    <h3 class="text-3xl font-bold mb-2">什麼是「單車旅遊」？</h3>
+                    <p class="text-slate-400 font-medium">時速 15 公里的靈魂對話</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="md:w-2/3 space-y-8">
+                    <div class="bg-white/5 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300">
+                        <h4 class="text-xl font-bold text-anime-gold mb-4">🚴 拒絕傳統「趕路」式旅遊！</h4>
+                        <p class="text-slate-300 leading-relaxed">
+                            如果說搭遊覽車是「被動地看著世界路過」，那麼單車旅遊就是一種徹頭徹尾的「主動式旅遊」（Active Tourism）與「慢遊」（Slow Travel）。<br><br>
+                            當你以時速 15 公里騎行時，一切都變了——你能聞到剛割過草的青澀味、感受到迎面而來的微風溫差。時速 15 公里，恰好是人類靈魂能與土地產生深刻對話的完美配速。
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 border-l-4 border-l-anime-accent hover:translate-y-[-5px] transition-transform">
+                            <h5 class="font-bold text-lg mb-2">長征勇士型</h5>
+                            <p class="text-sm text-slate-400">跨城市、多日騎行，目的地只是藉口，目的是斯多葛式的自我對話。</p>
+                        </div>
+                        <div class="glass-card p-6 border-l-4 border-l-anime-sky hover:translate-y-[-5px] transition-transform">
+                            <h5 class="font-bold text-lg mb-2">定點漫遊型</h5>
+                            <p class="text-sm text-slate-400">這類人懂享受！找間舒適飯店為中心，輻射狀向外探索，平衡勞動與生活美學。</p>
+                        </div>
+                        <div class="glass-card p-6 border-l-4 border-l-anime-gold hover:translate-y-[-5px] transition-transform">
+                            <h5 class="font-bold text-lg mb-2">熱血追星型</h5>
+                            <p class="text-sm text-slate-400">單車界的朝聖者。飛到歐洲親臨環法現場，在集體狂歡中感受腎上腺素。</p>
+                        </div>
+                        <div class="glass-card p-6 border-l-4 border-l-green-400 hover:translate-y-[-5px] transition-transform">
+                            <h5 class="font-bold text-lg mb-2">硬派野營型</h5>
+                            <p class="text-sm text-slate-400">結合越野與載物。把帳篷綁在車架上遁入山林，追求遠離文明的孤獨感。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: History Timeline -->
+        <section class="mb-24 relative">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold inline-block border-b-4 border-anime-sunset pb-2">🕰️ 單車旅行的「前世今生」</h2>
+            </div>
+            
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-600 bg-slate-800 text-anime-gold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        <svg class="fill-current" viewBox="0 0 12 12" width="12" height="12"><path d="M12 10v2H7V8.499a3.962 3.962 0 0 1-1-1.067 3.962 3.962 0 0 1-1 1.067V12H0v-2h1.5a.5.5 0 0 0 .5-.5V5.5a.5.5 0 0 0-.5-.5H0V3h5v2.499a3.962 3.962 0 0 1 1 1.067 3.962 3.962 0 0 1 1-1.067V3h5v2h-1.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5H12Z"/></svg>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[45%] p-6 glass-card hover:bg-slate-800 transition-colors">
+                        <time class="font-display font-bold text-anime-sunset">19 世紀</time>
+                        <div class="text-xl font-bold mb-1">科技新貴的象徵</div>
+                        <p class="text-slate-400">1880 年代「安全自行車」剛發明。那時騎單車去冒險，就像今天開著最新款特斯拉去公路旅行一樣潮。</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-600 bg-slate-800 text-slate-400 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        <svg class="fill-current" viewBox="0 0 12 12" width="12" height="12"><path d="M12 10v2H7V8.499a3.962 3.962 0 0 1-1-1.067 3.962 3.962 0 0 1-1 1.067V12H0v-2h1.5a.5.5 0 0 0 .5-.5V5.5a.5.5 0 0 0-.5-.5H0V3h5v2.499a3.962 3.962 0 0 1 1 1.067 3.962 3.962 0 0 1 1-1.067V3h5v2h-1.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5H12Z"/></svg>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[45%] p-6 glass-card hover:bg-slate-800 transition-colors">
+                        <time class="font-display font-bold text-slate-500">20 世紀中期</time>
+                        <div class="text-xl font-bold mb-1">被汽車打入冷宮</div>
+                        <p class="text-slate-400">汽車工業崛起，人類迷戀內燃機，單車一度退縮為代步工具，成了買不起車的象徵。</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-600 bg-slate-800 text-anime-sky shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        <svg class="fill-current" viewBox="0 0 12 12" width="12" height="12"><path d="M12 10v2H7V8.499a3.962 3.962 0 0 1-1-1.067 3.962 3.962 0 0 1-1 1.067V12H0v-2h1.5a.5.5 0 0 0 .5-.5V5.5a.5.5 0 0 0-.5-.5H0V3h5v2.499a3.962 3.962 0 0 1 1 1.067 3.962 3.962 0 0 1 1-1.067V3h5v2h-1.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5H12Z"/></svg>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[45%] p-6 glass-card hover:bg-slate-800 transition-colors">
+                        <time class="font-display font-bold text-anime-sky">19 70 年代</time>
+                        <div class="text-xl font-bold mb-1">鳳凰涅槃</div>
+                        <p class="text-slate-400">能源危機與環保意識抬頭，單車旅遊再度復甦。荷蘭、德國開始重新審視這兩輪發明。</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-slate-600 bg-slate-800 text-anime-accent shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        <svg class="fill-current" viewBox="0 0 12 12" width="12" height="12"><path d="M12 10v2H7V8.499a3.962 3.962 0 0 1-1-1.067 3.962 3.962 0 0 1-1 1.067V12H0v-2h1.5a.5.5 0 0 0 .5-.5V5.5a.5.5 0 0 0-.5-.5H0V3h5v2.499a3.962 3.962 0 0 1 1 1.067 3.962 3.962 0 0 1 1-1.067V3h5v2h-1.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5H12Z"/></svg>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[45%] p-6 glass-card hover:bg-slate-800 transition-colors">
+                        <time class="font-display font-bold text-anime-accent">21 世紀</time>
+                        <div class="text-xl font-bold mb-1">黃金狂潮</div>
+                        <p class="text-slate-400">高度完善的專用路網（環島1號線、EuroVelo），這無疑是單車旅遊歷史上最美好的時代！</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: High Value Market -->
+        <section class="mb-24">
+            <div class="bg-gradient-to-r from-slate-900 to-indigo-950 p-8 md:p-16 rounded-[40px] shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-10 opacity-10">
+                    <svg class="w-64 h-64 fill-white" viewBox="0 0 24 24"><path d="M15.5,12c2.5,0,4.5,2,4.5,4.5c0,2.5-2,4.5-4.5,4.5c-2.5,0-4.5-2-4.5-4.5C11,14,13,12,15.5,12z M15.5,13 c-1.9,0-3.5,1.6-3.5,3.5s1.6,3.5,3.5,3.5s3.5-1.6,3.5-3.5S17.4,13,15.5,13z M5,12c2.5,0,4.5,2,4.5,4.5C9.5,19,7.5,21,5,21 c-2.5,0-4.5-2-4.5-4.5C0.5,14,2.5,12,5,12z M5,13c-1.9,0-3.5,1.6-3.5,3.5s1.6,3.5,3.5,3.5S8.5,18.4,8.5,16.5S6.9,13,5,13z M18.6,8.1 L15,11.7l-1.1-1.1l3.6-3.6H12v-1.5h5.5c0.8,0,1.5,0.7,1.5,1.5v1.1H18.6z M11,5H6.5c-1.1,0-2,0.9-2,2v5H6V7h5V5z"/></svg>
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
+                        <span class="p-2 bg-anime-gold/20 rounded-lg">💰</span> 為什麼大家都在瘋單車？
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h4 class="text-xl font-bold text-anime-gold mb-3">單車客其實是「財神爺」？</h4>
+                            <p class="text-slate-300 leading-relaxed mb-6">
+                                研究顯示：單車遊客因為消耗大量體能，在餐飲、住宿上的平均每日支出，往往比一般團體客還要高！移動速度慢、停留天數長，對地方經濟貢獻極大。
+                            </p>
+                            <h4 class="text-xl font-bold text-anime-gold mb-3">偏鄉救星</h4>
+                            <p class="text-slate-300 leading-relaxed">
+                                這是關於「空間正義」的觀察。單車能深入大型車進不去的神祕偏鄉，把觀光收益平均分配到了偏遠地區。
+                            </p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center bg-white/5 p-8 rounded-3xl border border-white/10">
+                            <div class="text-anime-gold font-display font-black text-6xl mb-2">High</div>
+                            <div class="text-xl tracking-widest text-slate-400 uppercase">Value Market</div>
+                            <div class="mt-8 space-y-4 w-full">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span>安全自行車專用道</span>
+                                    <span class="text-anime-sky">★★★★★</span>
+                                </div>
+                                <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-anime-sky w-[95%]"></div>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span>單車友善住宿</span>
+                                    <span class="text-anime-sky">★★★★★</span>
+                                </div>
+                                <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-anime-sky w-[85%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Reality Check -->
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold mb-10 text-center">🚧 帥氣背後的「骨感現實」</h2>
+            <div class="bento-grid">
+                <div class="glass-card p-8 col-span-1 md:col-span-2 group overflow-hidden">
+                    <div class="flex items-start gap-6">
+                        <div class="text-4xl">⚔️</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 group-hover:text-anime-accent transition-colors">路權大對決</h4>
+                            <p class="text-slate-400">當時速 15 公里的單車遇上時速 60 公里的汽機車，往往會引發道路分配的零和博弈，是現代交通規劃最頭痛的火藥庫。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 group">
+                    <h4 class="text-xl font-bold mb-2 flex items-center gap-2"><span class="text-2xl">🌱</span> 山林痕跡</h4>
+                    <p class="text-slate-400 text-sm">登山車頻繁越野可能造成土壤侵蝕、破壞植被。如何愛它而不傷害它？是玩家必須面對的課題。</p>
+                </div>
+                <div class="glass-card p-8 group">
+                    <h4 class="text-xl font-bold mb-2 flex items-center gap-2"><span class="text-2xl">💸</span> 預算爭議</h4>
+                    <p class="text-slate-400 text-sm">鋪設大規模路網需要鉅額稅金。當使用率不如預期時，往往會面臨投資是否值得的質疑。</p>
+                </div>
+                <div class="glass-card p-8 col-span-1 md:col-span-2 group bg-anime-accent/10">
+                    <div class="flex items-center gap-4">
+                        <div class="text-4xl animate-pulse">⛈️</div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-1">老天爺的臉色</h4>
+                            <p class="text-slate-400">氣候敏感度高是致命傷。冬雨下個不停時，業者營收會雪崩式下滑。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future -->
+        <section class="mb-24">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-black anime-gradient-text">未來單車宇宙</h2>
+                <p class="text-slate-500 mt-2">科技與環保的交匯點</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-3xl border-2 border-slate-700 hover:border-anime-sky transition-all group">
+                    <div class="w-14 h-14 bg-anime-sky/20 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">⚡</div>
+                    <h5 class="text-xl font-bold mb-4">E-bike 推坑王</h5>
+                    <p class="text-slate-400 text-sm leading-relaxed">降低了體能門檻，讓爬坡不再是痛苦的修行。連銀髮族和小孩都能輕鬆入坑。</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 rounded-3xl border-2 border-slate-700 hover:border-green-400 transition-all group">
+                    <div class="w-14 h-14 bg-green-400/20 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">🌿</div>
+                    <h5 class="text-xl font-bold mb-4">低碳旅遊優等生</h5>
+                    <p class="text-slate-400 text-sm leading-relaxed">在追求淨零排放的時代，單車成為落實永續旅遊（ESG）的首選工具。</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 rounded-3xl border-2 border-slate-700 hover:border-anime-sunset transition-all group">
+                    <div class="w-14 h-14 bg-anime-sunset/20 rounded-2xl flex items-center justify-center mb-6 text-2xl group-hover:scale-110 transition-transform">📱</div>
+                    <h5 class="text-xl font-bold mb-4">虛實整合體驗</h5>
+                    <p class="text-slate-400 text-sm leading-relaxed">透過 GPS 導航與穿戴裝置規劃路線、分享成就，完成迷人的數位旅遊體驗。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mt-32 mb-20 text-center">
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="h-1 w-24 bg-anime-accent mx-auto"></div>
+                <h2 class="text-3xl font-bold">結語</h2>
+                <p class="text-xl text-slate-300 leading-relaxed italic">
+                    「單車旅遊，從來都不只是從 A 點移動到 B 點的物理過程，而是一場透過肌肉收縮與呼吸節奏，重新丈量自己與世界距離的靈魂對話。」
+                </p>
+                <div class="pt-8">
+                    <button class="bg-anime-sky hover:bg-sky-400 text-slate-900 font-bold py-4 px-10 rounded-full text-lg shadow-[0_0_20px_rgba(135,206,235,0.4)] transition-all hover:scale-105 active:scale-95">
+                        跨上單車，現在出發！
+                    </button>
+                </div>
+                <p class="text-slate-500 text-sm mt-4">最重要的永遠不是終點，而是那份掌控節奏的自由。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Decoration Elements (Anime style) -->
+    <div class="fixed top-1/4 -left-20 w-40 h-40 bg-anime-sky/5 rounded-full blur-3xl -z-10 animate-float"></div>
+    <div class="fixed bottom-1/4 -right-20 w-60 h-60 bg-anime-sunset/5 rounded-full blur-3xl -z-10 animate-float" style="animation-delay: -2s;"></div>
+
+    <script>
+        // Simple scroll reveal observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
